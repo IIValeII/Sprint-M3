@@ -1,0 +1,76 @@
+/*estilo al mensaje de la modal*/
+#txt {
+
+font-size: 1.5rem;
+color: #36A0FF;
+text-align: center;
+}
+/*estilo al botón de la modal */
+#bmodal{
+
+    background-color:white;
+    border-radius: 25px;
+    color:crimson;
+    border:1px solid crimson;
+}
+
+/*estilo contenido de la modal */
+
+.modal-content{
+    background-color:azure;
+    border-radius: 20px; 
+   
+}
+/*estilo cabecera de la modal */
+.modal-header{
+
+    background-color: #36A0FF;
+    color:white;
+    border-radius: 20px 20px 0 0; 
+    
+}
+
+/*estilo al título*/
+h5 {
+    color: #36A0FF;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+#tabla {
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+  }
+  
+  table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 10px;
+  }
+  
+  th {
+    background-color: lightgray;
+  }
+  
+  #numero {
+    font-weight: bold;
+  }
+  
+  #resultados tr:nth-child(even) {
+    background-color: lightgray;
+  }
+  
+  #resultados tr:first-child {
+    font-weight: bold;
+  }
+  
+  #resultados td:first-child {
+    font-weight: bold;
+  }
