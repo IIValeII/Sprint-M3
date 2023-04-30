@@ -1,76 +1,116 @@
 /*estilo al mensaje de la modal*/
 #txt {
 
-font-size: 1.5rem;
-color: #36A0FF;
-text-align: center;
-}
-/*estilo al botón de la modal */
-#bmodal{
+  font-size: 1.5rem;
+  color: #36A0FF;
+  text-align: center;
+  }
+  /*estilo al botón de la modal */
+  #bmodal{
+  
+      background-color:white;
+      border-radius: 25px;
+      color:crimson;
+      border:1px solid crimson;
+  }
+  
+  /*estilo contenido de la modal */
+  
+  .modal-content{
+      background-color:azure;
+      border-radius: 20px; 
+     
+  }
+  /*estilo cabecera de la modal */
+  .modal-header{
+  
+      background-color: #36A0FF;
+      color:white;
+      border-radius: 20px 20px 0 0; 
+      
+  }
+  
+  /*estilo al título*/
+  h4 {
+      color: white;
+      font-size: 22px;
+      padding: 10px;
+  }  
 
-    background-color:white;
-    border-radius: 25px;
-    color:crimson;
-    border:1px solid crimson;
-}
-
-/*estilo contenido de la modal */
-
-.modal-content{
-    background-color:azure;
-    border-radius: 20px; 
-   
-}
-/*estilo cabecera de la modal */
-.modal-header{
-
-    background-color: #36A0FF;
-    color:white;
-    border-radius: 20px 20px 0 0; 
+    th {
+      background-color: #1f53c5;;
+    } 
     
+    body {
+      background-image: url('https://cdn.pixabay.com/photo/2016/10/22/17/06/gradient-1761190_1280.jpg');
+    } 
+    
+    .form {
+      width: 400px;
+      background: #24303c;
+      padding: 30px;
+      margin: auto;
+      margin-top: 100px;
+      border-radius: 4px;
+      font-family: 'calibri';
+      color: white;
+      box-shadow: 7px 13px 37px #000;
+    }
+    
+    .form h4 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    
+    .form-control {
+      width: 100%;
+      background: #24303c;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      border: 1px solid #1f53c5;
+      font-family: 'calibri';
+      font-size: 18px;
+      color: white;
+    }
+    
+     #boton {
+      width: 100%;
+      background: #1f53c5;
+      border: none;
+      padding: 12px;
+      color: white;
+      margin: 16px 0;
+      font-size: 16px;
+    }
+    /* estilo a la tabla */
+    .table-dark {
+      width: 400px;
+      background-color: #24303c;
+      padding: 10px;
+      margin: auto;
+      margin-top: 20px;
+      border-radius: 4px;
+      font-family: 'calibri';
+      color: white;
+      box-shadow: 7px 13px 37px #24303c;
+      border: 2px solid #1f53c5;
+    }
+   /*estilo al pie de página */
+    footer {
+      width: 100%;
+      background-color: #1f53c5;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      border-radius: 4px;
+      border: 1px solid #1f53c5;
+      font-family: 'calibri';
+      margin: 2rem 0;
+      display: flex;
+      justify-content: center;
+  }
+.navbar {
+  background-color: #1f53c5;
 }
-
-/*estilo al título*/
-h5 {
-    color: #36A0FF;
-    font-size: 20px;
-    padding: 10px;
-}
-
-
-#tabla {
-    margin: 50px auto;
-    width: 80%;
-    text-align: center;
-  }
-  
-  table {
-    margin: 20px auto;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th, td {
-    border: 1px solid black;
-    padding: 10px;
-  }
-  
-  th {
-    background-color: lightgray;
-  }
-  
-  #numero {
-    font-weight: bold;
-  }
-  
-  #resultados tr:nth-child(even) {
-    background-color: lightgray;
-  }
-  
-  #resultados tr:first-child {
-    font-weight: bold;
-  }
-  
-  #resultados td:first-child {
-    font-weight: bold;
-  }
+     

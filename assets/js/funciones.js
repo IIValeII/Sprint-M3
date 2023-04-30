@@ -1,70 +1,99 @@
-//se crea instancia de ventana modal
+//se crea instancias de ventana modal
 export var ventana = bootstrap.Modal.getOrCreateInstance(myModal);
-//se declara una variable con el texto del cuerpo de la modal
+// export var ventanaTabla = bootstrap.Modal.getOrCreateInstance(myModal2);
+//se declara variables con el texto del cuerpo de la modal
 export var parrafo = document.getElementById("txt");
+// export var parrafoTabla = document.getElementById("txt2");
 
-//funcion que suma n números
-export const sumaNumeros = numero => {
-  let suma = 0;
-
-  for (let i = 1; i <= numero; i++) {
-    suma += i;
-  }
-  return suma;
+//funcion que formatea los valores numericos
+export function currencyFormatter({ currency, value}) {
+    const formatter = new Intl.NumberFormat('de-DE', {
+      style: 'currency',
+      minimumFractionDigits: 0,
+      currency
+    }) 
+    return formatter.format(value)
 }
-//funcion que determina si un número es primo
-export const primo = numero => {
-  if (numero <= 1) return false;
+//se crea la función constructora del objeto Afiliado
+export function Persona( nombre, apellido, fechaNac, activo, fechaIngreso, sueldoActual, sueldoSemAnt, cargaFam, numCargas ){
+    
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.fechaNac = fechaNac;
+    this.activo = activo;
+    this.fechaIngreso = fechaIngreso;
+    this.sueldoActual = sueldoActual;
+    this.sueldoSemAnt = sueldoSemAnt;
+    this.cargaFam = cargaFam;
+    this.numCargas = numCargas;
 
-  // Comprobamos si el número es divisible por algún número menor que él mismo
-  for (let i = 2; i < numero; i++) {
-    if (numero % i === 0) return false;
-  }
-  // Si no ha sido divisible por ningún número es primo
-  return true
+  //método que calcula el valos de la asignación familiar, 
+  //dependiendo del sueldo del semestre anterior
+    this.asignacionFamiliar = function(){
+        let valorCarga=0;
+        if( this.cargaFam ){
+            if(sueldoSemAnt <= 429899 ){
+                valorCarga = 16828;
+                return  valorCarga;
+            }else if( sueldoSemAnt > 429899 && sueldoSemAnt <= 627913 ){
+                valorCarga = 10327;
+                return  valorCarga;
+            }else if( sueldoSemAnt > 627913 && sueldoSemAnt <= 979330 ){
+                valorCarga = 3264;
+                return  valorCarga;
+            }
+        }
+        return valorCarga;
+    }
+    
 }
 
-//funcion que valida numero ingresado
-export const validarNumero = (numero) => {
-
-  if (isNaN(numero) || numero === "" || numero.length === 0) {
-    parrafo.innerHTML = `Ingrese numero valido`;
+//función que valida input tipo texto
+export const validaTexto = (texto) => {
+if( texto == null || texto.length == 0 || /^\s+$/.test(texto) ) { 
+    parrafo.innerHTML = "Ingrese datos válidos";
     ventana.show();
     return false;
-  } else {
+    }else {
     return true;
-  }
-}
-//función que obtiene la cuenta regresiva de un número dado
-export const cuentaRegresiva = (n) => {
-
-  var cuenta = [];
-  for (let i = n; i >= 1; i--) {
-    cuenta.push(i);
-  }
-  return cuenta;
+    }
 }
 
-// función que suma sólo los números pares 
-//de un rango desde 12 hasta n
-export const sumaPares = (num4) => {
-  let suma2 = 0;
-  for (let i = 12; i <= num4; i = i + 2) {
-
-    suma2 = suma2 + i;
-  }
-  return suma2;
+//función que valida input tipo numérico
+export const validaNumero = (numero) => {
+if( numero == null || numero.length == 0 || /^\s+$/.test(numero) ) { return false;}
+}
+//funcion que limpia el formulario
+export const limpiar = () => {
+   document.getElementById('input_nombre').value=""; 
+   document.getElementById('input_apellido').value="";
+   document.getElementById('input_nacimiento').value="";
+   document.getElementById('activo').checked=false;
+   document.getElementById('input_ingreso').value=""; 
+   document.getElementById('inputSueldoActual').value="";
+   document.getElementById('inputSueldoAnterior').value="";
+   document.getElementById('cargas').checked=false;
+   document.getElementById('inputCargas').value="";
 }
 
-//función que obtiene la tabla de multiplicar hasta 12
-//de un número ingresado por el usuario
-export const tablaMultiplicar = (num5) => {
-  var tabla = [];
-  for (let i = 1; i <= 12; i++) {
-    let resultado = i * num5;
-    tabla.push([
-      [`${i}*${num5}=${resultado}`],
-    ])
+//se desactivan los elementos de cantidad cargas familiares
+ export const desactivarCargas = () => {
+   document.getElementById("inputCargas").style.display = "none";
+ }
+
+ //función que habilita los input de ingreso para el trabajador activo
+ export const activarCargas = () => {
+    document.getElementById("inputCargas").style.display = "block";
   }
-  return tabla;
-}
+ 
+//se desactivan los elementos de cantidad cargas familiares
+export const desactivarFecha = () => {
+    document.getElementById("input_ingreso").style.display = "none";
+    document.getElementById("labelIngreso").style.display = "none";
+  }
+ 
+  //función que habilita los input de ingreso para el trabajador activo
+export const activarFecha = () => {
+     document.getElementById("input_ingreso").style.display = "block";
+     document.getElementById("labelIngreso").style.display = "block";  
+  }   
