@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sprint Modulo 3</title>
-  <!-- Se integra Fontawesome -->
-  <script src="https://kit.fontawesome.com/81acdfe774.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/index.css">
 </head>
-
-<body>
-  <!--Menu de navegación-->
   <div class="container">
+    <!--Menu de navegación-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
       <a class="navbar-brand" href="#"><i class="fa-light fa-solid fa-users"></i>Grupo 2</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -32,20 +27,18 @@
           </li>
         </ul>
       </div>
-
     </nav>
-  </div> 
-
-    <div class="container">
+  
+    <!-- Formulario -->
       <div class="row">
-        <div class="col-xl-4 sm-6 col-12">
+        <div class="col-xl-4 col-12">
           <form class="form" id="form" name="form">
-            <legend>Formulario</legend>
+            <legend><i class="fa-solid fa-user"></i> Formulario</legend>
             <input type="name" class="form-control" id="input_nombre" aria-describedby="namehelp"
               placeholder="Ingrese Nombre" required>
             <input type="name" class="form-control" id="input_apellido" aria-describedby="namehelp"
               placeholder="Ingrese Apellidos" required>
-            <label for="input_nacimiento" class="form-label">Ingrese Fecha de Nacimiento</label>
+            <label for="input_nacimiento" class="form-label">Ingrese Fecha de Nacimiento <i class="fa-solid fa-cake-candles"></i></label>
             <input type="date" class="form-control" id="input_nacimiento" required>
 
             <div class="form-check mb-2">
@@ -60,9 +53,9 @@
             <input type="date" class="form-control" id="input_ingreso">
 
             <input type="number" class="form-control" id="inputSueldoActual" aria-describedby="numberhelp"
-              placeholder="Ingrese sueldo actual" required>
+              placeholder="Ingrese sueldo actual" min="1" pattern="^[0-9]+" required>
             <input type="number" class="form-control" id="inputSueldoAnterior" aria-describedby="numberhelp"
-              placeholder="Ingrese sueldo anterior" required>
+              placeholder="Ingrese sueldo anterior" min="1" pattern="^[0-9]+" required>
 
             <div class="form-check mb-2">
               <input class="form-check-input" type="checkbox" id="cargas">
@@ -74,32 +67,30 @@
             <input type="number" class="form-control" id="inputCargas" aria-describedby="numberhelp"
               placeholder="Ingrese N° de cargas">
             <!-- Button trigger modal -->
-            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-              id="boton">
+            <button type="submit" class="btn btn-primary" id="boton">
               Enviar Datos
             </button>
           </form>
         </div>
 
         <!-- tabla para mostrar los datos -->
-        <div class="col-xl-8 sm-6 col-12 text-center my-5 table-responsive-xl">
+        <div class="col-xl-8 col-12 text-center my-3 table-responsive-xl">
           <h4 id="tituloTabla">Listado de Personal</h4>
           <table id="myTabla" class="table-dark table-bordered table-striped" width="90%"></table>
         </div>
 
       </div>
-    </div>
     <!-- Modal -->
     <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Mensaje</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p id="txt">...</p>
+            <p id="txt">Hello</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -108,7 +99,7 @@
       </div>
     </div>
     <!--Fin Modal-->
-
+  </div>
     <!--pie de página-->
     <footer class="container">
       <p> Equipo trabajo 2 - 2023</p>
@@ -116,13 +107,15 @@
 
     <script src="https://code.jquery.com/jquery-3.6.4.js"
       integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <!-- Se integra Fontawesome -->
+    <script src="https://kit.fontawesome.com/81acdfe774.js" crossorigin="anonymous"></script>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script type="module" src="./assets/js/formulario.js"></script>
     <script type="module" src="./assets/js/funciones.js"></script>
-
+  
 </body>
 
 </html>
