@@ -39,7 +39,7 @@
             <input type="name" class="form-control" id="input_apellido" aria-describedby="namehelp"
               placeholder="Ingrese Apellidos" required>
             <label for="input_nacimiento" class="form-label">Ingrese Fecha de Nacimiento <i class="fa-solid fa-cake-candles"></i></label>
-            <input type="date" class="form-control" id="input_nacimiento" required>
+            <input type="date" class="form-control" id="input_nacimiento" required min="1900-01-01" max="2023-12-31">
 
             <div class="form-check mb-2">
               <input class="form-check-input" type="checkbox" id="activo">
@@ -50,7 +50,7 @@
 
             <label for="input_ingreso" class="form-label" id="labelIngreso">Ingrese Fecha de Ingreso a la
               Organizacion</label>
-            <input type="date" class="form-control" id="input_ingreso">
+            <input type="date" class="form-control" id="input_ingreso" min="1900-01-01" max="2023-12-31">
 
             <input type="number" class="form-control" id="inputSueldoActual" aria-describedby="numberhelp"
               placeholder="Ingrese sueldo actual" min="1" pattern="^[0-9]+" required>
