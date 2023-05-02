@@ -1,13 +1,11 @@
 /*estilo al mensaje de la modal*/
 #txt {
-
   font-size: 1.5rem;
   color: #36A0FF;
   text-align: center;
   }
   /*estilo al botón de la modal */
   #bmodal{
-  
       background-color:white;
       border-radius: 25px;
       color:crimson;
@@ -23,11 +21,9 @@
   }
   /*estilo cabecera de la modal */
   .modal-header{
-  
       background-color: #36A0FF;
       color:white;
-      border-radius: 20px 20px 0 0; 
-      
+      border-radius: 20px 20px 0 0;     
   }
   
   /*estilo al título*/
@@ -50,7 +46,7 @@
       background: #24303c;
       padding: 30px;
       margin: auto;
-      margin-top: 100px;
+      margin-top: 30px;
       border-radius: 4px;
       font-family: 'calibri';
       color: white;
@@ -67,7 +63,7 @@
       background: #24303c;
       padding: 10px;
       border-radius: 4px;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
       border: 1px solid #1f53c5;
       font-family: 'calibri';
       font-size: 18px;
